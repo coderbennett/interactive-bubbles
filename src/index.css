@@ -20,7 +20,7 @@ code {
 }
 
 .bubble {
-  margin: auto;
+  margin: 12px auto;
   width: 240px;
   height: 240px;
   background-color: whitesmoke;
@@ -28,12 +28,13 @@ code {
   border: 1px solid var(--main-text-color);
   display: inline-block;
   text-align: center;
-  transition-duration: 0.5s;
+  transition-duration: 1s;
 }
 
 .bubble h3 {
   margin: 32px;
   color: var(--main-bg-color);
+  transition-duration: 1s;
 }
 
 .bubble:hover {
@@ -42,7 +43,7 @@ code {
 }
 
 .bubble:hover .bubble-content {
-  display: inline;
+  color: var(--main-text-color);
 }
 
 .bubble:hover h3 {
@@ -56,7 +57,7 @@ code {
 }
 
 .bubble .bubble-content {
-  display: none;
   padding: 12px;
   transition-duration: 1s;
+  color: var(--main-bg-color);
 }
