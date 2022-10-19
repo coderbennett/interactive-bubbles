@@ -1,3 +1,8 @@
+html {
+  --main-bg-color: #0b4571;
+  --main-text-color: white;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +10,53 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.bubble {
+  margin: auto;
+  width: 240px;
+  height: 240px;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  border: 1px solid var(--main-text-color);
+  display: inline-block;
+  text-align: center;
+  transition-duration: 0.5s;
+}
+
+.bubble h3 {
+  margin: 32px;
+  color: var(--main-bg-color);
+}
+
+.bubble:hover {
+  background-color: var(--main-bg-color);
+  box-shadow: 5px 5px 15px whitesmoke;
+}
+
+.bubble:hover .bubble-content {
+  display: inline;
+}
+
+.bubble:hover h3 {
+  color: var(--main-text-color);
+}
+
+.bubble-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.bubble .bubble-content {
+  display: none;
+  padding: 12px;
+  transition-duration: 1s;
 }
